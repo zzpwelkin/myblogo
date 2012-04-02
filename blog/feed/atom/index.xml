@@ -7,25 +7,25 @@
   <title type="text">Your Blog's Name</title>
   <subtitle type="text">Your Blog's short description</subtitle>
 
-  <updated>2012-03-24T16:55:44Z</updated>
+  <updated>2012-04-02T03:01:48Z</updated>
   <generator uri="http://blogofile.com/">Blogofile</generator>
 
-  <link rel="alternate" type="text/html" href="http://www.yoursite.com/blog" />
-  <id>http://www.yoursite.com/blog/feed/atom/</id>
-  <link rel="self" type="application/atom+xml" href="http://www.yoursite.com/blog/feed/atom/" />
+  <link rel="alternate" type="text/html" href="http://zzpwelkin.github.com/blog" />
+  <id>http://zzpwelkin.github.com/blog/feed/atom/</id>
+  <link rel="self" type="application/atom+xml" href="http://zzpwelkin.github.com/blog/feed/atom/" />
   <entry>
     <author>
       <name></name>
-      <uri>http://www.yoursite.com/blog</uri>
+      <uri>http://zzpwelkin.github.com/blog</uri>
     </author>
     <title type="html"><![CDATA[网络GIS服务构建计划书]]></title>
-    <link rel="alternate" type="text/html" href="http://www.yoursite.com/blog/2012/03/25/网络gis服务构建计划书" />
-    <id>http://www.yoursite.com/blog/2012/03/25/网络gis服务构建计划书</id>
-    <updated>2012-03-25T00:55:44Z</updated>
-    <published>2012-03-25T00:55:44Z</published>
-    <category scheme="http://www.yoursite.com/blog" term="WPS网络服务" />
+    <link rel="alternate" type="text/html" href="http://zzpwelkin.github.com/myblogo/blog/2012/04/02/网络gis服务构建计划书" />
+    <id>http://zzpwelkin.github.com/myblogo/blog/2012/04/02/网络gis服务构建计划书</id>
+    <updated>2012-04-02T11:01:48Z</updated>
+    <published>2012-04-02T11:01:48Z</published>
+    <category scheme="http://zzpwelkin.github.com/blog" term="WPS网络服务" />
     <summary type="html"><![CDATA[网络GIS服务构建计划书]]></summary>
-    <content type="html" xml:base="http://www.yoursite.com/blog/2012/03/25/网络gis服务构建计划书"><![CDATA[<h3>每天工作时间安排</h3>
+    <content type="html" xml:base="http://zzpwelkin.github.com/myblogo/blog/2012/04/02/网络gis服务构建计划书"><![CDATA[<h3>每天工作时间安排</h3>
 <ul>
 <li>早：9:00 ~ 12:00</li>
 <li>下：休息</li>
@@ -112,72 +112,72 @@
   <entry>
     <author>
       <name></name>
-      <uri>http://www.yoursite.com/blog</uri>
+      <uri>http://zzpwelkin.github.com/blog</uri>
     </author>
     <title type="html"><![CDATA[Post 5]]></title>
-    <link rel="alternate" type="text/html" href="http://www.yoursite.com/blog/2010/08/29/post-5" />
-    <id>http://www.yoursite.com/blog/2010/08/29/post-5</id>
+    <link rel="alternate" type="text/html" href="http://zzpwelkin.github.com/myblogo/blog/2010/08/29/post-5" />
+    <id>http://zzpwelkin.github.com/myblogo/blog/2010/08/29/post-5</id>
     <updated>2010-08-29T15:23:00Z</updated>
     <published>2010-08-29T15:23:00Z</published>
-    <category scheme="http://www.yoursite.com/blog" term="General Stuff" />
+    <category scheme="http://zzpwelkin.github.com/blog" term="General Stuff" />
     <summary type="html"><![CDATA[Post 5]]></summary>
-    <content type="html" xml:base="http://www.yoursite.com/blog/2010/08/29/post-5"><![CDATA[<p>This is post #5</p>]]></content>
+    <content type="html" xml:base="http://zzpwelkin.github.com/myblogo/blog/2010/08/29/post-5"><![CDATA[<p>This is post #5</p>]]></content>
   </entry>
   <entry>
     <author>
       <name></name>
-      <uri>http://www.yoursite.com/blog</uri>
+      <uri>http://zzpwelkin.github.com/blog</uri>
     </author>
     <title type="html"><![CDATA[Post 7]]></title>
-    <link rel="alternate" type="text/html" href="http://www.yoursite.com/blog/2009/08/29/post-7" />
-    <id>http://www.yoursite.com/blog/2009/08/29/post-7</id>
+    <link rel="alternate" type="text/html" href="http://zzpwelkin.github.com/myblogo/blog/2009/08/29/post-7" />
+    <id>http://zzpwelkin.github.com/myblogo/blog/2009/08/29/post-7</id>
     <updated>2009-08-29T15:25:00Z</updated>
     <published>2009-08-29T15:25:00Z</published>
-    <category scheme="http://www.yoursite.com/blog" term="General Stuff" />
+    <category scheme="http://zzpwelkin.github.com/blog" term="General Stuff" />
     <summary type="html"><![CDATA[Post 7]]></summary>
-    <content type="html" xml:base="http://www.yoursite.com/blog/2009/08/29/post-7"><![CDATA[<p>This is post #7</p>]]></content>
+    <content type="html" xml:base="http://zzpwelkin.github.com/myblogo/blog/2009/08/29/post-7"><![CDATA[<p>This is post #7</p>]]></content>
   </entry>
   <entry>
     <author>
       <name></name>
-      <uri>http://www.yoursite.com/blog</uri>
+      <uri>http://zzpwelkin.github.com/blog</uri>
     </author>
     <title type="html"><![CDATA[Post 6]]></title>
-    <link rel="alternate" type="text/html" href="http://www.yoursite.com/blog/2009/08/29/post-6" />
-    <id>http://www.yoursite.com/blog/2009/08/29/post-6</id>
+    <link rel="alternate" type="text/html" href="http://zzpwelkin.github.com/myblogo/blog/2009/08/29/post-6" />
+    <id>http://zzpwelkin.github.com/myblogo/blog/2009/08/29/post-6</id>
     <updated>2009-08-29T15:24:00Z</updated>
     <published>2009-08-29T15:24:00Z</published>
-    <category scheme="http://www.yoursite.com/blog" term="General Stuff" />
+    <category scheme="http://zzpwelkin.github.com/blog" term="General Stuff" />
     <summary type="html"><![CDATA[Post 6]]></summary>
-    <content type="html" xml:base="http://www.yoursite.com/blog/2009/08/29/post-6"><![CDATA[<p>This is post #6</p>]]></content>
+    <content type="html" xml:base="http://zzpwelkin.github.com/myblogo/blog/2009/08/29/post-6"><![CDATA[<p>This is post #6</p>]]></content>
   </entry>
   <entry>
     <author>
       <name></name>
-      <uri>http://www.yoursite.com/blog</uri>
+      <uri>http://zzpwelkin.github.com/blog</uri>
     </author>
     <title type="html"><![CDATA[Post 4]]></title>
-    <link rel="alternate" type="text/html" href="http://www.yoursite.com/blog/2009/08/29/post-4" />
-    <id>http://www.yoursite.com/blog/2009/08/29/post-4</id>
+    <link rel="alternate" type="text/html" href="http://zzpwelkin.github.com/myblogo/blog/2009/08/29/post-4" />
+    <id>http://zzpwelkin.github.com/myblogo/blog/2009/08/29/post-4</id>
     <updated>2009-08-29T15:22:00Z</updated>
     <published>2009-08-29T15:22:00Z</published>
-    <category scheme="http://www.yoursite.com/blog" term="General Stuff" />
+    <category scheme="http://zzpwelkin.github.com/blog" term="General Stuff" />
     <summary type="html"><![CDATA[Post 4]]></summary>
-    <content type="html" xml:base="http://www.yoursite.com/blog/2009/08/29/post-4"><![CDATA[<p>This is post #4</p>]]></content>
+    <content type="html" xml:base="http://zzpwelkin.github.com/myblogo/blog/2009/08/29/post-4"><![CDATA[<p>This is post #4</p>]]></content>
   </entry>
   <entry>
     <author>
       <name></name>
-      <uri>http://www.yoursite.com/blog</uri>
+      <uri>http://zzpwelkin.github.com/blog</uri>
     </author>
     <title type="html"><![CDATA[Post 3 - Unicode Test - How about some 日本語テスト]]></title>
-    <link rel="alternate" type="text/html" href="http://www.yoursite.com/blog/2009/08/22/post-3---unicode-test---how-about-some-日本語テスト" />
-    <id>http://www.yoursite.com/blog/2009/08/22/post-3---unicode-test---how-about-some-日本語テスト</id>
+    <link rel="alternate" type="text/html" href="http://zzpwelkin.github.com/myblogo/blog/2009/08/22/post-3---unicode-test---how-about-some-日本語テスト" />
+    <id>http://zzpwelkin.github.com/myblogo/blog/2009/08/22/post-3---unicode-test---how-about-some-日本語テスト</id>
     <updated>2009-08-22T15:22:00Z</updated>
     <published>2009-08-22T15:22:00Z</published>
-    <category scheme="http://www.yoursite.com/blog" term="Unicode" />
+    <category scheme="http://zzpwelkin.github.com/blog" term="Unicode" />
     <summary type="html"><![CDATA[Post 3 - Unicode Test - How about some 日本語テスト]]></summary>
-    <content type="html" xml:base="http://www.yoursite.com/blog/2009/08/22/post-3---unicode-test---how-about-some-日本語テスト"><![CDATA[<p>Anglo-Saxon Rune Poem:</p>
+    <content type="html" xml:base="http://zzpwelkin.github.com/myblogo/blog/2009/08/22/post-3---unicode-test---how-about-some-日本語テスト"><![CDATA[<p>Anglo-Saxon Rune Poem:</p>
 <p>ᚠᛇᚻ᛫ᛒᛦᚦ᛫ᚠᚱᚩᚠᚢᚱ᛫ᚠᛁᚱᚪ᛫ᚷᛖᚻᚹᛦᛚᚳᚢᛗ
 ᛋᚳᛖᚪᛚ᛫ᚦᛖᚪᚻ᛫ᛗᚪᚾᚾᚪ᛫ᚷᛖᚻᚹᛦᛚᚳ᛫ᛗᛁᚳᛚᚢᚾ᛫ᚻᛦᛏ᛫ᛞᚫᛚᚪᚾ
 ᚷᛁᚠ᛫ᚻᛖ᛫ᚹᛁᛚᛖ᛫ᚠᚩᚱ᛫ᛞᚱᛁᚻᛏᚾᛖ᛫ᛞᚩᛗᛖᛋ᛫ᚻᛚᛇᛏᚪᚾ᛬</p>
@@ -197,45 +197,45 @@ I kå Glas frässa, ond des macht mr nix!
   <entry>
     <author>
       <name></name>
-      <uri>http://www.yoursite.com/blog</uri>
+      <uri>http://zzpwelkin.github.com/blog</uri>
     </author>
     <title type="html"><![CDATA[Post 2]]></title>
-    <link rel="alternate" type="text/html" href="http://www.yoursite.com/blog/2009/07/24/post-2" />
-    <id>http://www.yoursite.com/blog/2009/07/24/post-2</id>
+    <link rel="alternate" type="text/html" href="http://zzpwelkin.github.com/myblogo/blog/2009/07/24/post-2" />
+    <id>http://zzpwelkin.github.com/myblogo/blog/2009/07/24/post-2</id>
     <updated>2009-07-24T16:20:00Z</updated>
     <published>2009-07-24T16:20:00Z</published>
-    <category scheme="http://www.yoursite.com/blog" term="Category 2" />
-    <category scheme="http://www.yoursite.com/blog" term="Category 1" />
+    <category scheme="http://zzpwelkin.github.com/blog" term="Category 2" />
+    <category scheme="http://zzpwelkin.github.com/blog" term="Category 1" />
     <summary type="html"><![CDATA[Post 2]]></summary>
-    <content type="html" xml:base="http://www.yoursite.com/blog/2009/07/24/post-2"><![CDATA[<p>This is post #2</p>]]></content>
+    <content type="html" xml:base="http://zzpwelkin.github.com/myblogo/blog/2009/07/24/post-2"><![CDATA[<p>This is post #2</p>]]></content>
   </entry>
   <entry>
     <author>
       <name></name>
-      <uri>http://www.yoursite.com/blog</uri>
+      <uri>http://zzpwelkin.github.com/blog</uri>
     </author>
     <title type="html"><![CDATA[Post 1]]></title>
-    <link rel="alternate" type="text/html" href="http://www.yoursite.com/blog/2009/07/23/post-1" />
-    <id>http://www.yoursite.com/blog/2009/07/23/post-1</id>
+    <link rel="alternate" type="text/html" href="http://zzpwelkin.github.com/myblogo/blog/2009/07/23/post-1" />
+    <id>http://zzpwelkin.github.com/myblogo/blog/2009/07/23/post-1</id>
     <updated>2009-07-23T15:22:00Z</updated>
     <published>2009-07-23T15:22:00Z</published>
-    <category scheme="http://www.yoursite.com/blog" term="Category 1" />
+    <category scheme="http://zzpwelkin.github.com/blog" term="Category 1" />
     <summary type="html"><![CDATA[Post 1]]></summary>
-    <content type="html" xml:base="http://www.yoursite.com/blog/2009/07/23/post-1"><![CDATA[<p>This is post #1</p>]]></content>
+    <content type="html" xml:base="http://zzpwelkin.github.com/myblogo/blog/2009/07/23/post-1"><![CDATA[<p>This is post #1</p>]]></content>
   </entry>
   <entry>
     <author>
       <name></name>
-      <uri>http://www.yoursite.com/blog</uri>
+      <uri>http://zzpwelkin.github.com/blog</uri>
     </author>
     <title type="html"><![CDATA[Syntax highlight test]]></title>
-    <link rel="alternate" type="text/html" href="http://www.yoursite.com/blog/2007/08/29/syntax-highlight-test" />
-    <id>http://www.yoursite.com/blog/2007/08/29/syntax-highlight-test</id>
+    <link rel="alternate" type="text/html" href="http://zzpwelkin.github.com/myblogo/blog/2007/08/29/syntax-highlight-test" />
+    <id>http://zzpwelkin.github.com/myblogo/blog/2007/08/29/syntax-highlight-test</id>
     <updated>2007-08-29T15:25:00Z</updated>
     <published>2007-08-29T15:25:00Z</published>
-    <category scheme="http://www.yoursite.com/blog" term="General Stuff" />
+    <category scheme="http://zzpwelkin.github.com/blog" term="General Stuff" />
     <summary type="html"><![CDATA[Syntax highlight test]]></summary>
-    <content type="html" xml:base="http://www.yoursite.com/blog/2007/08/29/syntax-highlight-test"><![CDATA[<p>This post contains some highlighted python code:</p>
+    <content type="html" xml:base="http://zzpwelkin.github.com/myblogo/blog/2007/08/29/syntax-highlight-test"><![CDATA[<p>This post contains some highlighted python code:</p>
 <div class="pygments_murphy"><pre><span class="kn">import</span> <span class="nn">this</span>
 
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;main&quot;</span><span class="p">:</span>
