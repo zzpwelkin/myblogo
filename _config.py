@@ -19,7 +19,9 @@
 #  If you're hosting a blogofile powered site as a subdirectory of a larger
 #  non-blogofile site, then you would set the site_url to the full URL
 #  including that subdirectory: "http://www.yoursite.com/path/to/blogofile-dir"
-site.url = "http://zzpwelkin.github.com/myblogo/"
+#site.url = "http://zzpwelkin.github.com/myblogo/"
+site.url = "http://localhost:8080/myglogo/"
+site.dir = "_site"
 
 #### Blog Settings ####
 blog = controllers.blog
@@ -38,12 +40,22 @@ blog.path = "/blog"
 
 ## blog_name -- Your Blog's name.
 # This is used repeatedly in default blog templates
-blog.name = "Your Blog's Name"
+blog.name = "zzpwelkin"
 #blog.name = "路漫漫其修远兮，我将上下而求所——不息的鹏"
 
 ## blog_description -- A short one line description of the blog
 # used in the RSS/Atom feeds.
-blog.description = "Your Blog's short description"
+blog.description = "Working in headwind"
 
 ## blog_timezone -- the timezone that you normally write your blog posts from
 blog.timezone = "Asia/Chongqing"
+
+## blog comments
+blog.disqus.enabled = True
+
+########################################################
+## 					photo gallery                     ##
+########################################################
+controllers.photo_gallery.enabled = True
+## photo html directory
+photo_gallery_dir = "photos"
