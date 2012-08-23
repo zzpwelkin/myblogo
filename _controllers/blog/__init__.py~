@@ -34,7 +34,6 @@ def run():
     #categories.sort_into_categories()
 
     blog.logger = logging.getLogger(config['name'])
-    blog.logger.setLevel(logging.DEBUG)
     
     permapage.run()
     chronological.run()

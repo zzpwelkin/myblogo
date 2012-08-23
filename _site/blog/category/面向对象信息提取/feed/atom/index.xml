@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed
+  xmlns="http://www.w3.org/2005/Atom"
+  xmlns:thr="http://purl.org/syndication/thread/1.0"
+  xml:lang="en"
+   >
+  <title type="text">zzpwelkin</title>
+  <subtitle type="text">Working in headwind</subtitle>
+
+  <updated>2012-08-21T15:38:36Z</updated>
+  <generator uri="http://blogofile.com/">Blogofile</generator>
+
+  <link rel="alternate" type="text/html" href="http://localhost:8080/blog" />
+  <id>http://localhost:8080/blog/feed/atom/</id>
+  <link rel="self" type="application/atom+xml" href="http://localhost:8080/blog/feed/atom/" />
+  <entry>
+    <author>
+      <name></name>
+      <uri>http://localhost:8080/blog</uri>
+    </author>
+    <title type="html"><![CDATA[区域增长分隔]]></title>
+    <link rel="alternate" type="text/html" href="http://localhost:8080/myglogo/blog/2012/08/21/区域增长分隔" />
+    <id>http://localhost:8080/myglogo/blog/2012/08/21/区域增长分隔</id>
+    <updated>2012-08-21T23:38:36Z</updated>
+    <published>2012-08-21T23:38:36Z</published>
+    <category scheme="http://localhost:8080/blog" term="面向对象信息提取" />
+    <summary type="html"><![CDATA[区域增长分隔]]></summary>
+    <content type="html" xml:base="http://localhost:8080/myglogo/blog/2012/08/21/区域增长分隔"><![CDATA[<h3>分割概述</h3>
+<p>面向对象中的分隔分为以pixels或cells(如规则2D和3D的格网)和以对象为单位的分类</p>
+<p>*1. 以pixels或cells为单位的分类
+    * 输入: a. 规则格网数据(如影像、DEM数据等)
+          b. 对象或处理范围约束文件(如线或面要素矢量文件)</p>
+<pre><code>* 输出: 分类后的面要素矢量文件。空间属性:每个对象的空间范围；非空间属性：每个对象的ID号，色度相关的值(如均值、方差、最大值、最小值、紧致度等),几何形状相关值(如面积、周长、长宽比等)，继承属性(如所属的上层对象，包含的下层对象.是否需要？从集合信息中可以计算得到)
+
+* 实现算法：Meanshift(OTB和grass均已实现)、Mumford-S(grass的Addons中已实现)、区域增长算法
+</code></pre>
+<p>*2. 以对象为单位的分类
+      * 输入: 1 步得到的结果(LabelMap对象或Vector对象)、原始影像</p>
+<pre><code>  * 输出: 同1 (LabelImage对象或Vector对象)
+
+  * 实现算法：区域增长算法(FNA分形网络演变分隔算法)
+</code></pre>
+<h3>实现计划：</h3>
+<pre><code>在OTB的OBIA模块上添加分隔算法
+* 8/13～8/15： 查看OBIA模块已经实现了那些东西及定义分割类接口;
+    OBIA模块应用了ITK的Label对象框架(OTB都有那些框架?)。
+    上面两种分割方法的概要数据流为: 1) Grids数据-----&gt;矢量文件; 2) 矢量文件------&gt;矢量文件。
+
+* 8/16 ~ 8/17: FNAfilter实现(8/16上午学习OTB中filter具体编写方法，8/16下午实现FNAFilter并通过编译; 8/17编写FNAfilter的Example并测试)
+</code></pre>]]></content>
+  </entry>
+</feed>

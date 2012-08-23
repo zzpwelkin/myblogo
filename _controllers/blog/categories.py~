@@ -32,7 +32,7 @@ def write_categories():
     """Write all the blog posts in categories"""
     root = bf.util.path_join(blog.path, blog.category_dir)
     # Add category to left
-    #bf.writer.materialize_template("_templates/categories.mako","categories.html",{"categories_all":blog.all_categories})
+    bf.writer.materialize_template("_templates/categories.mako","categories.html",{"categories_all":blog.all_categories})
 
     #Find all the categories:
     categories = set()

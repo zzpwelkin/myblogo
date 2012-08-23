@@ -1,0 +1,37 @@
+#-*-coding:utf-8-*-
+#
+##
+# 相册画廊
+#
+
+import os 
+#import blogofile as bf
+from blogofile.cache import bf
+
+config = {"name"		: "Photo Gallery",
+		"description" 	: "A very simplistic photo gallery, used as an example",
+		"priority"		: 40.0}
+
+photos_dir = "photos"
+
+def run():
+	photos = read_photos()
+	write_pages(photos)
+	write_photo_index(photos)
+
+def read_photos():
+	#This could be a lot more advanced, like supporting subfolders, creating
+	#thumbnails, and even reading the Jpeg EXIF data for better titles and such.
+	#This is kept simple for demonstration purposes.
+	#return [p for p in os.listdir(photos_dir) if p.lower().endswith(".jpg")]
+	return [p for p in os.listdir(bf.config.photo_gallery_dir)]
+
+def write_pages(photos):
+	for photo in photos:
+		#photo = os.path.join(photos_dir, photo)
+		bf.writer.materialize_template("_templates/photo.mako",
+				(bf.config.photo_gallery_dir,photo+".html"), {"photo":photo})
+
+def write_photo_index(photos):
+	bf.writer.materialize_template("_templates/photo_index.mako",
+			(bf.config.photo_gallery_dir,"index.html"), {"photos":photos})

@@ -233,8 +233,10 @@ class Post(object):
         except KeyError:
             pass
         try:
-            self.categories = set([Category(x.strip()) for x in \
-                                       y['categories'].split(",")])
+            #self.categories = set([Category(x.strip()) for x in \
+            #                           y['categories'].split(",")])
+            self.categories.update([Category(x.strip()) for x in
+                                        y['categories'].split(",")])
         except:
             pass
         try:

@@ -4,28 +4,86 @@
   xmlns:thr="http://purl.org/syndication/thread/1.0"
   xml:lang="en"
    >
-  <title type="text">Your Blog's Name</title>
-  <subtitle type="text">Your Blog's short description</subtitle>
+  <title type="text">zzpwelkin</title>
+  <subtitle type="text">Working in headwind</subtitle>
 
-  <updated>2012-04-02T03:01:48Z</updated>
+  <updated>2012-08-21T15:38:36Z</updated>
   <generator uri="http://blogofile.com/">Blogofile</generator>
 
-  <link rel="alternate" type="text/html" href="http://zzpwelkin.github.com/blog" />
-  <id>http://zzpwelkin.github.com/blog/feed/atom/</id>
-  <link rel="self" type="application/atom+xml" href="http://zzpwelkin.github.com/blog/feed/atom/" />
+  <link rel="alternate" type="text/html" href="http://localhost:8080/blog" />
+  <id>http://localhost:8080/blog/feed/atom/</id>
+  <link rel="self" type="application/atom+xml" href="http://localhost:8080/blog/feed/atom/" />
   <entry>
     <author>
       <name></name>
-      <uri>http://zzpwelkin.github.com/blog</uri>
+      <uri>http://localhost:8080/blog</uri>
+    </author>
+    <title type="html"><![CDATA[影像镶嵌自动化实现白皮书]]></title>
+    <link rel="alternate" type="text/html" href="http://localhost:8080/myglogo/blog/2012/08/21/影像镶嵌自动化实现白皮书" />
+    <id>http://localhost:8080/myglogo/blog/2012/08/21/影像镶嵌自动化实现白皮书</id>
+    <updated>2012-08-21T23:38:36Z</updated>
+    <published>2012-08-21T23:38:36Z</published>
+    <category scheme="http://localhost:8080/blog" term="影像镶嵌" />
+    <summary type="html"><![CDATA[影像镶嵌自动化实现白皮书]]></summary>
+    <content type="html" xml:base="http://localhost:8080/myglogo/blog/2012/08/21/影像镶嵌自动化实现白皮书"><![CDATA[<h3>影像镶嵌的主要难点</h3>
+<ol>
+<li>影像之间空间几何信息差异问题，使得镶嵌后的影像上拼接处地物有不重合现象；</li>
+<li>影像之间亮度和色度差异问题</li>
+<li>单幅影像内亮度和色</li>
+</ol>
+<h3>实现步骤</h3>
+<ol>
+<li>
+<p>投影影像到同一坐标系下和并重采样影像为同一分辨率，对每一幅影像进行匀光匀色操作(如果需要，非必须的)；</p>
+</li>
+<li>
+<p>计算影像重叠信息并生成重叠信息表和重叠影像重叠区域裁减后的影像；</p>
+</li>
+<li>
+<blockquote>
+<p>S(a). 几何差异处理：用MS等方法，处理裁减后的重叠影像对并生成对象层( <em>@a</em> )<br />
+</p>
+<blockquote>
+<p>A(a) 拼接线生成：产生一条穿过对象个数最少的拼接线。此拼接线由穿过所有连续对象的中心线连接而成( <em>@b</em> )<br />
+A(b) 几何纠正：依据对象的周长、面积及主方向匹配重叠对象层上的对象，在对象上选取明显角点作为匹配的同名点，
+     由匹配的同名点和精度较高的参考影像生成其他影像几何纠正参数表( <em>@c</em> )<br />
+S(b). 辐射差异处理：根据匀光匀色算法( <em>@d</em> )，统计重叠影像辐射差异纠正模型并产生辐射纠正参数表</p>
+</blockquote>
+</blockquote>
+</li>
+<li>
+<p>依据上面生成的模型分别对影像进行纠正并生成修正后的影像；</p>
+</li>
+<li>
+<p>拼接修正后的影像</p>
+</li>
+</ol>
+<h3>具体实现方法</h3>
+<p>@a. 可以用较成熟的Mean-shift 或 mumford-shah方法产生对象层<br />
+@b. 待详细研究<br />
+@c. 几何纠正用一般的多项式拟合工具即可<br />
+@d. 目前已有的镶嵌软件都有匀光匀色功能，但我使用的几个软件感觉效果不太理想(也可能是自己参数每设置对吧)。最近使用了一个Montage软件，其对天文影像辐射纠正效&gt;    果很好，不知道其辐射纠正原理是否适合遥感影像</p>
+<h3>其他内容参考</h3>
+<ol>
+<li>Mean-Shift算法</li>
+<li>Mumford-Shah算法</li>
+<li>Montage软件</li>
+<li>hugin软件</li>
+</ol>]]></content>
+  </entry>
+  <entry>
+    <author>
+      <name></name>
+      <uri>http://localhost:8080/blog</uri>
     </author>
     <title type="html"><![CDATA[网络GIS服务构建计划书]]></title>
-    <link rel="alternate" type="text/html" href="http://zzpwelkin.github.com/myblogo/blog/2012/04/02/网络gis服务构建计划书" />
-    <id>http://zzpwelkin.github.com/myblogo/blog/2012/04/02/网络gis服务构建计划书</id>
-    <updated>2012-04-02T11:01:48Z</updated>
-    <published>2012-04-02T11:01:48Z</published>
-    <category scheme="http://zzpwelkin.github.com/blog" term="WPS网络服务" />
+    <link rel="alternate" type="text/html" href="http://localhost:8080/myglogo/blog/2012/08/21/网络gis服务构建计划书" />
+    <id>http://localhost:8080/myglogo/blog/2012/08/21/网络gis服务构建计划书</id>
+    <updated>2012-08-21T23:38:36Z</updated>
+    <published>2012-08-21T23:38:36Z</published>
+    <category scheme="http://localhost:8080/blog" term="WPS网络服务" />
     <summary type="html"><![CDATA[网络GIS服务构建计划书]]></summary>
-    <content type="html" xml:base="http://zzpwelkin.github.com/myblogo/blog/2012/04/02/网络gis服务构建计划书"><![CDATA[<h3>每天工作时间安排</h3>
+    <content type="html" xml:base="http://localhost:8080/myglogo/blog/2012/08/21/网络gis服务构建计划书"><![CDATA[<h3>每天工作时间安排</h3>
 <ul>
 <li>早：9:00 ~ 12:00</li>
 <li>下：休息</li>
@@ -112,134 +170,37 @@
   <entry>
     <author>
       <name></name>
-      <uri>http://zzpwelkin.github.com/blog</uri>
+      <uri>http://localhost:8080/blog</uri>
     </author>
-    <title type="html"><![CDATA[Post 5]]></title>
-    <link rel="alternate" type="text/html" href="http://zzpwelkin.github.com/myblogo/blog/2010/08/29/post-5" />
-    <id>http://zzpwelkin.github.com/myblogo/blog/2010/08/29/post-5</id>
-    <updated>2010-08-29T15:23:00Z</updated>
-    <published>2010-08-29T15:23:00Z</published>
-    <category scheme="http://zzpwelkin.github.com/blog" term="General Stuff" />
-    <summary type="html"><![CDATA[Post 5]]></summary>
-    <content type="html" xml:base="http://zzpwelkin.github.com/myblogo/blog/2010/08/29/post-5"><![CDATA[<p>This is post #5</p>]]></content>
-  </entry>
-  <entry>
-    <author>
-      <name></name>
-      <uri>http://zzpwelkin.github.com/blog</uri>
-    </author>
-    <title type="html"><![CDATA[Post 7]]></title>
-    <link rel="alternate" type="text/html" href="http://zzpwelkin.github.com/myblogo/blog/2009/08/29/post-7" />
-    <id>http://zzpwelkin.github.com/myblogo/blog/2009/08/29/post-7</id>
-    <updated>2009-08-29T15:25:00Z</updated>
-    <published>2009-08-29T15:25:00Z</published>
-    <category scheme="http://zzpwelkin.github.com/blog" term="General Stuff" />
-    <summary type="html"><![CDATA[Post 7]]></summary>
-    <content type="html" xml:base="http://zzpwelkin.github.com/myblogo/blog/2009/08/29/post-7"><![CDATA[<p>This is post #7</p>]]></content>
-  </entry>
-  <entry>
-    <author>
-      <name></name>
-      <uri>http://zzpwelkin.github.com/blog</uri>
-    </author>
-    <title type="html"><![CDATA[Post 6]]></title>
-    <link rel="alternate" type="text/html" href="http://zzpwelkin.github.com/myblogo/blog/2009/08/29/post-6" />
-    <id>http://zzpwelkin.github.com/myblogo/blog/2009/08/29/post-6</id>
-    <updated>2009-08-29T15:24:00Z</updated>
-    <published>2009-08-29T15:24:00Z</published>
-    <category scheme="http://zzpwelkin.github.com/blog" term="General Stuff" />
-    <summary type="html"><![CDATA[Post 6]]></summary>
-    <content type="html" xml:base="http://zzpwelkin.github.com/myblogo/blog/2009/08/29/post-6"><![CDATA[<p>This is post #6</p>]]></content>
-  </entry>
-  <entry>
-    <author>
-      <name></name>
-      <uri>http://zzpwelkin.github.com/blog</uri>
-    </author>
-    <title type="html"><![CDATA[Post 4]]></title>
-    <link rel="alternate" type="text/html" href="http://zzpwelkin.github.com/myblogo/blog/2009/08/29/post-4" />
-    <id>http://zzpwelkin.github.com/myblogo/blog/2009/08/29/post-4</id>
-    <updated>2009-08-29T15:22:00Z</updated>
-    <published>2009-08-29T15:22:00Z</published>
-    <category scheme="http://zzpwelkin.github.com/blog" term="General Stuff" />
-    <summary type="html"><![CDATA[Post 4]]></summary>
-    <content type="html" xml:base="http://zzpwelkin.github.com/myblogo/blog/2009/08/29/post-4"><![CDATA[<p>This is post #4</p>]]></content>
-  </entry>
-  <entry>
-    <author>
-      <name></name>
-      <uri>http://zzpwelkin.github.com/blog</uri>
-    </author>
-    <title type="html"><![CDATA[Post 3 - Unicode Test - How about some 日本語テスト]]></title>
-    <link rel="alternate" type="text/html" href="http://zzpwelkin.github.com/myblogo/blog/2009/08/22/post-3---unicode-test---how-about-some-日本語テスト" />
-    <id>http://zzpwelkin.github.com/myblogo/blog/2009/08/22/post-3---unicode-test---how-about-some-日本語テスト</id>
-    <updated>2009-08-22T15:22:00Z</updated>
-    <published>2009-08-22T15:22:00Z</published>
-    <category scheme="http://zzpwelkin.github.com/blog" term="Unicode" />
-    <summary type="html"><![CDATA[Post 3 - Unicode Test - How about some 日本語テスト]]></summary>
-    <content type="html" xml:base="http://zzpwelkin.github.com/myblogo/blog/2009/08/22/post-3---unicode-test---how-about-some-日本語テスト"><![CDATA[<p>Anglo-Saxon Rune Poem:</p>
-<p>ᚠᛇᚻ᛫ᛒᛦᚦ᛫ᚠᚱᚩᚠᚢᚱ᛫ᚠᛁᚱᚪ᛫ᚷᛖᚻᚹᛦᛚᚳᚢᛗ
-ᛋᚳᛖᚪᛚ᛫ᚦᛖᚪᚻ᛫ᛗᚪᚾᚾᚪ᛫ᚷᛖᚻᚹᛦᛚᚳ᛫ᛗᛁᚳᛚᚢᚾ᛫ᚻᛦᛏ᛫ᛞᚫᛚᚪᚾ
-ᚷᛁᚠ᛫ᚻᛖ᛫ᚹᛁᛚᛖ᛫ᚠᚩᚱ᛫ᛞᚱᛁᚻᛏᚾᛖ᛫ᛞᚩᛗᛖᛋ᛫ᚻᛚᛇᛏᚪᚾ᛬</p>
-<p>Tamil poetry:</p>
-<p>யாமறிந்த மொழிகளிலே தமிழ்மொழி போல் இனிதாவது எங்கும் காணோம்,
-பாமரராய் விலங்குகளாய், உலகனைத்தும் இகழ்ச்சிசொலப் பான்மை கெட்டு,
-நாமமது தமிழரெனக் கொண்டு இங்கு வாழ்ந்திடுதல் நன்றோ? சொல்லீர்!
-தேமதுரத் தமிழோசை உலகமெலாம் பரவும்வகை செய்தல் வேண்டும்.</p>
-<p>I can eat glass:
-私はガラスを食べられます。それは私を傷つけません。
-Կրնամ ապակի ուտել և ինծի անհանգիստ չըներ։
-I kå Glas frässa, ond des macht mr nix!
-᚛᚛ᚉᚑᚅᚔᚉᚉᚔᚋ ᚔᚈᚔ ᚍᚂᚐᚅᚑ ᚅᚔᚋᚌᚓᚅᚐ᚜
-אני יכול לאכול זכוכית וזה לא מזיק לי
-काचं शक्नोम्यत्तुम् । नोपहिनस्ति माम् ॥ </p>]]></content>
-  </entry>
-  <entry>
-    <author>
-      <name></name>
-      <uri>http://zzpwelkin.github.com/blog</uri>
-    </author>
-    <title type="html"><![CDATA[Post 2]]></title>
-    <link rel="alternate" type="text/html" href="http://zzpwelkin.github.com/myblogo/blog/2009/07/24/post-2" />
-    <id>http://zzpwelkin.github.com/myblogo/blog/2009/07/24/post-2</id>
-    <updated>2009-07-24T16:20:00Z</updated>
-    <published>2009-07-24T16:20:00Z</published>
-    <category scheme="http://zzpwelkin.github.com/blog" term="Category 2" />
-    <category scheme="http://zzpwelkin.github.com/blog" term="Category 1" />
-    <summary type="html"><![CDATA[Post 2]]></summary>
-    <content type="html" xml:base="http://zzpwelkin.github.com/myblogo/blog/2009/07/24/post-2"><![CDATA[<p>This is post #2</p>]]></content>
-  </entry>
-  <entry>
-    <author>
-      <name></name>
-      <uri>http://zzpwelkin.github.com/blog</uri>
-    </author>
-    <title type="html"><![CDATA[Post 1]]></title>
-    <link rel="alternate" type="text/html" href="http://zzpwelkin.github.com/myblogo/blog/2009/07/23/post-1" />
-    <id>http://zzpwelkin.github.com/myblogo/blog/2009/07/23/post-1</id>
-    <updated>2009-07-23T15:22:00Z</updated>
-    <published>2009-07-23T15:22:00Z</published>
-    <category scheme="http://zzpwelkin.github.com/blog" term="Category 1" />
-    <summary type="html"><![CDATA[Post 1]]></summary>
-    <content type="html" xml:base="http://zzpwelkin.github.com/myblogo/blog/2009/07/23/post-1"><![CDATA[<p>This is post #1</p>]]></content>
-  </entry>
-  <entry>
-    <author>
-      <name></name>
-      <uri>http://zzpwelkin.github.com/blog</uri>
-    </author>
-    <title type="html"><![CDATA[Syntax highlight test]]></title>
-    <link rel="alternate" type="text/html" href="http://zzpwelkin.github.com/myblogo/blog/2007/08/29/syntax-highlight-test" />
-    <id>http://zzpwelkin.github.com/myblogo/blog/2007/08/29/syntax-highlight-test</id>
-    <updated>2007-08-29T15:25:00Z</updated>
-    <published>2007-08-29T15:25:00Z</published>
-    <category scheme="http://zzpwelkin.github.com/blog" term="General Stuff" />
-    <summary type="html"><![CDATA[Syntax highlight test]]></summary>
-    <content type="html" xml:base="http://zzpwelkin.github.com/myblogo/blog/2007/08/29/syntax-highlight-test"><![CDATA[<p>This post contains some highlighted python code:</p>
-<div class="pygments_murphy"><pre><span class="kn">import</span> <span class="nn">this</span>
+    <title type="html"><![CDATA[区域增长分隔]]></title>
+    <link rel="alternate" type="text/html" href="http://localhost:8080/myglogo/blog/2012/08/21/区域增长分隔" />
+    <id>http://localhost:8080/myglogo/blog/2012/08/21/区域增长分隔</id>
+    <updated>2012-08-21T23:38:36Z</updated>
+    <published>2012-08-21T23:38:36Z</published>
+    <category scheme="http://localhost:8080/blog" term="面向对象信息提取" />
+    <summary type="html"><![CDATA[区域增长分隔]]></summary>
+    <content type="html" xml:base="http://localhost:8080/myglogo/blog/2012/08/21/区域增长分隔"><![CDATA[<h3>分割概述</h3>
+<p>面向对象中的分隔分为以pixels或cells(如规则2D和3D的格网)和以对象为单位的分类</p>
+<p>*1. 以pixels或cells为单位的分类
+    * 输入: a. 规则格网数据(如影像、DEM数据等)
+          b. 对象或处理范围约束文件(如线或面要素矢量文件)</p>
+<pre><code>* 输出: 分类后的面要素矢量文件。空间属性:每个对象的空间范围；非空间属性：每个对象的ID号，色度相关的值(如均值、方差、最大值、最小值、紧致度等),几何形状相关值(如面积、周长、长宽比等)，继承属性(如所属的上层对象，包含的下层对象.是否需要？从集合信息中可以计算得到)
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;main&quot;</span><span class="p">:</span>
-    <span class="k">print</span> <span class="s">&quot;Hello, World!&quot;</span>
-</pre></div>]]></content>
+* 实现算法：Meanshift(OTB和grass均已实现)、Mumford-S(grass的Addons中已实现)、区域增长算法
+</code></pre>
+<p>*2. 以对象为单位的分类
+      * 输入: 1 步得到的结果(LabelMap对象或Vector对象)、原始影像</p>
+<pre><code>  * 输出: 同1 (LabelImage对象或Vector对象)
+
+  * 实现算法：区域增长算法(FNA分形网络演变分隔算法)
+</code></pre>
+<h3>实现计划：</h3>
+<pre><code>在OTB的OBIA模块上添加分隔算法
+* 8/13～8/15： 查看OBIA模块已经实现了那些东西及定义分割类接口;
+    OBIA模块应用了ITK的Label对象框架(OTB都有那些框架?)。
+    上面两种分割方法的概要数据流为: 1) Grids数据-----&gt;矢量文件; 2) 矢量文件------&gt;矢量文件。
+
+* 8/16 ~ 8/17: FNAfilter实现(8/16上午学习OTB中filter具体编写方法，8/16下午实现FNAFilter并通过编译; 8/17编写FNAfilter的Example并测试)
+</code></pre>]]></content>
   </entry>
 </feed>

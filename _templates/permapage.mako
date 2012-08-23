@@ -2,7 +2,7 @@
 <%include file="post.mako" args="post=post" />
 <div id="disqus_thread"></div>
 <script type="text/javascript">
-  var disqus_url = "${post.permalink}";
+  var disqus_url = "${bf.util.force_unicode(post.permalink)}";
 </script>
 % if bf.config.blog.disqus.enabled:
 <script type="text/javascript" src="http://disqus.com/forums/${bf.config.blog.disqus.name}/embed.js"></script>

@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     ${self.head()}
-    <link rel='stylesheet' href='${bf.config.site.url}css/base.css' type='text/css' />
+    <link rel='stylesheet' href=css/base.css' type='text/css' />
   </head>
   <body>
     <div class="header" id="content">
