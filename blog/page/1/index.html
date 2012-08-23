@@ -7,52 +7,109 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     
-  <title>Your Blog's Name</title>
-<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/myblogo/blog/feed" />
+  <title>zzpwelkin</title>
+<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/myglogo/blog/feed" />
 <link rel="alternate" type="application/atom+xml" title="Atom 1.0"
-href="/myblogo/blog/feed/atom" />
+href="/myglogo/blog/feed/atom" />
 <link rel='stylesheet' href='/css/pygments_murphy.css' type='text/css' />
-	<style type="text/css"> 
-		
-		body { 
-            background: #fff; 
-            font-family: "Times New Roman", serif;
-        }
-        a:link, a:visited, a:hover {color: blue;}
-        h1 a:link, h1 a:visited, h1 a:hover { text-decoration:none; color: black }
-        h2 a:link, h2 a:visited, h2 a:hover { text-decoration:none; color: black }
-        h3 a:link, h3 a:visited, h3 a:hover { text-decoration:none; color: black }
-		h1 { width: 100%; text-align: center; }
-		div#content { padding: 10px 10px 10px 10px; }
-		div.nav ul { display: inline }
-		th { text-align: left; }
-		pre { overflow:auto; padding: 10px 5px 10px 5px; background: #eef; border-top: 1px solid #ccf; border-bottom: 1px solid #ccf; }
-		div.system-message { display: none; }
-		div.title { font-weight: bold; padding-top: 10px; padding-bottom: 10px; }
-		.text-right { text-align: right; }
-        .tableheader { background-color: #eee; font-weight: bold; } 
-	</style> 
 
 
+    <link rel='stylesheet' href='http://localhost:8080/myglogo/css/base.css' type='text/css' />
   </head>
   <body>
-    <div id="content">
+    <div class="header" id="content">
       
-  <h1 >Your Blog's Name</h1>
+  <h1 backage>zzpwelkin</h1>
 <p>记录并分享生活中的点滴.</p>
 <hr/>
 
 
       <div id="main_block">
-        <div id="prose_block">
+	<!-- 分类列表 -->
+	<div class="categorysidebar" id="category">
+	  <ul>
+
+		  <li><a href="/myglogo/blog/category/wps网络服务">WPS网络服务 (1)</a><li>	
+		  <li><a href="/myglogo/blog/category/影像镶嵌">影像镶嵌 (1)</a><li>	
+		  <li><a href="/myglogo/blog/category/面向对象信息提取">面向对象信息提取 (1)</a><li>	
+	  </ul>
+	</div>
+	
+	<!-- 内容体 -->
+        <div class="post" id="post_block">
           
   
 <div class="blog_post">
-  <a name="网络gis服务构建计划书"></a>
-  <h2 class="blog_post_title"><a href="/myblogo/blog/2012/04/02/网络gis服务构建计划书" rel="bookmark" title="Permanent Link to 网络GIS服务构建计划书">网络GIS服务构建计划书</a></h2>
-  <small>April 02, 2012 at 11:01 AM | categories: 
+  <a name="影像镶嵌自动化实现白皮书"></a>
+  <h2 class="blog_post_title"><a href="/myglogo/blog/2012/08/23/影像镶嵌自动化实现白皮书" rel="bookmark" title="Permanent Link to 影像镶嵌自动化实现白皮书">影像镶嵌自动化实现白皮书</a></h2>
+  <small>August 23, 2012 at 09:48 PM | categories: 
 
-<a href='/myblogo/blog/category/wps网络服务'>WPS网络服务</a>
+<a href='/myglogo/blog/category/影像镶嵌'>影像镶嵌</a>
+ | <a href="http://localhost:8080/myglogo/blog/2012/08/23/影像镶嵌自动化实现白皮书#disqus_thread">View Comments</a>
+</small><p/>
+  <div class="post_prose">
+    
+  <h3>影像镶嵌的主要难点</h3>
+<ol>
+<li>影像之间空间几何信息差异问题，使得镶嵌后的影像上拼接处地物有不重合现象；</li>
+<li>影像之间亮度和色度差异问题</li>
+<li>单幅影像内亮度和色</li>
+</ol>
+<h3>实现步骤</h3>
+<ol>
+<li>
+<p>投影影像到同一坐标系下和并重采样影像为同一分辨率，对每一幅影像进行匀光匀色操作(如果需要，非必须的)；</p>
+</li>
+<li>
+<p>计算影像重叠信息并生成重叠信息表和重叠影像重叠区域裁减后的影像；</p>
+</li>
+<li>
+<blockquote>
+<p>S(a). 几何差异处理：用MS等方法，处理裁减后的重叠影像对并生成对象层( <em>@a</em> )<br />
+</p>
+<blockquote>
+<p>A(a) 拼接线生成：产生一条穿过对象个数最少的拼接线。此拼接线由穿过所有连续对象的中心线连接而成( <em>@b</em> )<br />
+   A(b) 几何纠正：依据对象的周长、面积及主方向匹配重叠对象层上的对象，在对象上选取明显角点作为匹配的同名点，
+        由匹配的同名点和精度较高的参考影像生成其他影像几何纠正参数表( <em>@c</em> )<br />
+S(b). 辐射差异处理：根据匀光匀色算法( <em>@d</em> )，统计重叠影像辐射差异纠正模型并产生辐射纠正参数表</p>
+</blockquote>
+</blockquote>
+</li>
+<li>
+<p>依据上面生成的模型分别对影像进行纠正并生成修正后的影像；</p>
+</li>
+<li>
+<p>拼接修正后的影像</p>
+</li>
+</ol>
+<h3>具体实现方法</h3>
+<p>@a. 可以用较成熟的Mean-shift 或 mumford-shah方法产生对象层<br />
+@b. 待详细研究<br />
+@c. 几何纠正用一般的多项式拟合工具即可<br />
+@d. 目前已有的镶嵌软件都有匀光匀色功能，但我使用的几个软件感觉效果不太理想(也可能是自己参数每设置对吧)。最近使用了一个Montage软件，其对天文影像辐射纠正效&gt;    果很好，不知道其辐射纠正原理是否适合遥感影像</p>
+<h3>其他内容参考</h3>
+<ol>
+<li>Mean-Shift算法</li>
+<li>Mumford-Shah算法</li>
+<li>Montage软件</li>
+<li>hugin软件</li>
+</ol>
+
+  </div>
+</div>
+
+
+
+  <div class="after_post"><a href="http://localhost:8080/myglogo/blog/2012/08/23/影像镶嵌自动化实现白皮书#disqus_thread">Read and Post Comments</a></div>
+  <hr class="interblog" />
+  
+<div class="blog_post">
+  <a name="网络gis服务构建计划书"></a>
+  <h2 class="blog_post_title"><a href="/myglogo/blog/2012/08/23/网络gis服务构建计划书" rel="bookmark" title="Permanent Link to 网络GIS服务构建计划书">网络GIS服务构建计划书</a></h2>
+  <small>August 23, 2012 at 09:48 PM | categories: 
+
+<a href='/myglogo/blog/category/wps网络服务'>WPS网络服务</a>
+ | <a href="http://localhost:8080/myglogo/blog/2012/08/23/网络gis服务构建计划书#disqus_thread">View Comments</a>
 </small><p/>
   <div class="post_prose">
     
@@ -145,93 +202,90 @@ href="/myblogo/blog/feed/atom" />
 
 
 
+  <div class="after_post"><a href="http://localhost:8080/myglogo/blog/2012/08/23/网络gis服务构建计划书#disqus_thread">Read and Post Comments</a></div>
   <hr class="interblog" />
   
 <div class="blog_post">
-  <a name="post-5"></a>
-  <h2 class="blog_post_title"><a href="/myblogo/blog/2010/08/29/post-5" rel="bookmark" title="Permanent Link to Post 5">Post 5</a></h2>
-  <small>August 29, 2010 at 03:23 PM | categories: 
+  <a name="区域增长分隔"></a>
+  <h2 class="blog_post_title"><a href="/myglogo/blog/2012/08/23/区域增长分隔" rel="bookmark" title="Permanent Link to 区域增长分隔">区域增长分隔</a></h2>
+  <small>August 23, 2012 at 09:48 PM | categories: 
 
-<a href='/myblogo/blog/category/general-stuff'>General Stuff</a>
+<a href='/myglogo/blog/category/面向对象信息提取'>面向对象信息提取</a>
+ | <a href="http://localhost:8080/myglogo/blog/2012/08/23/区域增长分隔#disqus_thread">View Comments</a>
 </small><p/>
   <div class="post_prose">
     
-  <p>This is post #5</p>
+  <h3>分割概述</h3>
+<p>面向对象中的分隔分为以pixels或cells(如规则2D和3D的格网)和以对象为单位的分类</p>
+<p>*1. 以pixels或cells为单位的分类
+    * 输入: a. 规则格网数据(如影像、DEM数据等)
+          b. 对象或处理范围约束文件(如线或面要素矢量文件)</p>
+<pre><code>* 输出: 分类后的面要素矢量文件。空间属性:每个对象的空间范围；非空间属性：每个对象的ID号，色度相关的值(如均值、方差、最大值、最小值、紧致度等),几何形状相关值(如面积、周长、长宽比等)，继承属性(如所属的上层对象，包含的下层对象.是否需要？从集合信息中可以计算得到)
+
+* 实现算法：Meanshift(OTB和grass均已实现)、Mumford-S(grass的Addons中已实现)、区域增长算法
+</code></pre>
+<p>*2. 以对象为单位的分类
+      * 输入: 1 步得到的结果(LabelMap对象或Vector对象)、原始影像</p>
+<pre><code>  * 输出: 同1 (LabelImage对象或Vector对象)
+
+  * 实现算法：区域增长算法(FNA分形网络演变分隔算法)
+</code></pre>
+<h3>实现计划：</h3>
+<pre><code>在OTB的OBIA模块上添加分隔算法
+* 8/13～8/15： 查看OBIA模块已经实现了那些东西及定义分割类接口;
+    OBIA模块应用了ITK的Label对象框架(OTB都有那些框架?)。
+    上面两种分割方法的概要数据流为: 1) Grids数据-----&gt;矢量文件; 2) 矢量文件------&gt;矢量文件。
+
+* 8/16 ~ 8/17: FNAfilter实现(8/16上午学习OTB中filter具体编写方法，8/16下午实现FNAFilter并通过编译; 8/17编写FNAfilter的Example并测试) 
+    延期(8/16 ~ 8/22)：FNAFilter实现延期，主要是应为对OTB中已有的类库不熟悉，不知道那些方法可以直接使用，那些没有提供
+    8/22: 获取相邻对象共享边界的长度函数GetSharedBorderLength()实现
+            已参考MergeLabelObjectFunctor类实现了该方法。而且了解到  1)在OTB中LabelObject形状属性是由X轴方向线段的集合组成的，此平行线段包含起始位置和线的长度;  2)在合并两个对象的时候，几何形状的合并其实就是对象所包含线段集合中线段的依次合并;  3) 其合并过程很巧妙的用了一些STL库中的函数. 首先对要合并的两个对象所含线段集合按照从上到下、从左到右的顺序排列(用了STL的stable_sort函数)，在对排序后的两个对象的线段集合合并(用了STL的merge函数)，最后在迭代循环依次合并重合的线段
+    8/22 pm: 构件FNAFilte处理管道，并用Example测试算法并修改
+    8/23 am: 需要修改的内容:  1) 输出背景值设置;   2) 将输入信息拷贝到输出;  3) 波段信息获取修改;  4) 改为多线程实现;  5)添加处理进度信息;  6) 添加内部信息调试打印函数
+</code></pre>
+<h3>待参透的内容</h3>
+<ol>
+<li>OTB中InPlace到底是什么意思？及如何使用？</li>
+<li>OTB中管道upstream和downstream实现的再了解，主要涉及到ProcessObject和DataObject两个基类之间的协作</li>
+<li>OTB中如何实现流处理和多线程的，主要参考文档及ImageSouce基类的实现</li>
+<li>OTB中如何添加测试和应用程序</li>
+</ol>
 
   </div>
 </div>
 
 
 
+  <div class="after_post"><a href="http://localhost:8080/myglogo/blog/2012/08/23/区域增长分隔#disqus_thread">Read and Post Comments</a></div>
   <hr class="interblog" />
-  
-<div class="blog_post">
-  <a name="post-7"></a>
-  <h2 class="blog_post_title"><a href="/myblogo/blog/2009/08/29/post-7" rel="bookmark" title="Permanent Link to Post 7">Post 7</a></h2>
-  <small>August 29, 2009 at 03:25 PM | categories: 
-
-<a href='/myblogo/blog/category/general-stuff'>General Stuff</a>
-</small><p/>
-  <div class="post_prose">
-    
-  <p>This is post #7</p>
-
-  </div>
-</div>
-
-
-
-  <hr class="interblog" />
-  
-<div class="blog_post">
-  <a name="post-6"></a>
-  <h2 class="blog_post_title"><a href="/myblogo/blog/2009/08/29/post-6" rel="bookmark" title="Permanent Link to Post 6">Post 6</a></h2>
-  <small>August 29, 2009 at 03:24 PM | categories: 
-
-<a href='/myblogo/blog/category/general-stuff'>General Stuff</a>
-</small><p/>
-  <div class="post_prose">
-    
-  <p>This is post #6</p>
-
-  </div>
-</div>
-
-
-
-  <hr class="interblog" />
-  
-<div class="blog_post">
-  <a name="post-4"></a>
-  <h2 class="blog_post_title"><a href="/myblogo/blog/2009/08/29/post-4" rel="bookmark" title="Permanent Link to Post 4">Post 4</a></h2>
-  <small>August 29, 2009 at 03:22 PM | categories: 
-
-<a href='/myblogo/blog/category/general-stuff'>General Stuff</a>
-</small><p/>
-  <div class="post_prose">
-    
-  <p>This is post #4</p>
-
-  </div>
-</div>
-
-
-
-  <hr class="interblog" />
- <a href="../2">Next Page »</a>
 
         </div><!-- End Prose Block -->
       </div><!-- End Main Block -->
-      <div id="footer">
+      <div class="footer" id="footer">
         
   <hr/>
-  This is a footer that appears on every page.
   <p id="credits">
 Powered by <a href="http://www.blogofile.com">Blogofile</a>.<br/>
 <br/>
-RSS feeds for <a href="/myblogo/blog/feed">Entries</a>
+RSS feeds for <a href="/myglogo/blog/feed">Entries</a>
+ and <a
+href="http://your_disqus_name.disqus.com/latest.rss">Comments</a>.
 <br>
 </p>
+<script type="text/javascript">
+//<![CDATA[
+(function() {
+		var links = document.getElementsByTagName('a');
+		var query = '?';
+		for(var i = 0; i < links.length; i++) {
+			if(links[i].href.indexOf('#disqus_thread') >= 0) {
+				query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+			}
+		}
+		document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/your_disqus_name/get_num_replies.js' + query + '"></' + 'script>');
+	})();
+//]]>
+</script>
 
 
       </div> <!-- End Footer -->

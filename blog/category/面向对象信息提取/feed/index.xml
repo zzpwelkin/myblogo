@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+     >
+  <channel>
+    <title>zzpwelkin</title>
+    <link>http://localhost:8080/blog</link>
+    <description>Working in headwind</description>
+    <pubDate>Thu, 23 Aug 2012 13:48:59 GMT</pubDate>
+    <generator>Blogofile</generator>
+    <sy:updatePeriod>hourly</sy:updatePeriod>
+    <sy:updateFrequency>1</sy:updateFrequency>
+    <item>
+      <title>区域增长分隔</title>
+      <link>http://localhost:8080/myglogo/blog/2012/08/23/区域增长分隔</link>
+      <pubDate>Thu, 23 Aug 2012 21:48:59 CST</pubDate>
+      <category><![CDATA[面向对象信息提取]]></category>
+      <guid isPermaLink="true">http://localhost:8080/myglogo/blog/2012/08/23/区域增长分隔</guid>
+      <description>区域增长分隔</description>
+      <content:encoded><![CDATA[<h3>分割概述</h3>
+<p>面向对象中的分隔分为以pixels或cells(如规则2D和3D的格网)和以对象为单位的分类</p>
+<p>*1. 以pixels或cells为单位的分类
+    * 输入: a. 规则格网数据(如影像、DEM数据等)
+          b. 对象或处理范围约束文件(如线或面要素矢量文件)</p>
+<pre><code>* 输出: 分类后的面要素矢量文件。空间属性:每个对象的空间范围；非空间属性：每个对象的ID号，色度相关的值(如均值、方差、最大值、最小值、紧致度等),几何形状相关值(如面积、周长、长宽比等)，继承属性(如所属的上层对象，包含的下层对象.是否需要？从集合信息中可以计算得到)
+
+* 实现算法：Meanshift(OTB和grass均已实现)、Mumford-S(grass的Addons中已实现)、区域增长算法
+</code></pre>
+<p>*2. 以对象为单位的分类
+      * 输入: 1 步得到的结果(LabelMap对象或Vector对象)、原始影像</p>
+<pre><code>  * 输出: 同1 (LabelImage对象或Vector对象)
+
+  * 实现算法：区域增长算法(FNA分形网络演变分隔算法)
+</code></pre>
+<h3>实现计划：</h3>
+<pre><code>在OTB的OBIA模块上添加分隔算法
+* 8/13～8/15： 查看OBIA模块已经实现了那些东西及定义分割类接口;
+    OBIA模块应用了ITK的Label对象框架(OTB都有那些框架?)。
+    上面两种分割方法的概要数据流为: 1) Grids数据-----&gt;矢量文件; 2) 矢量文件------&gt;矢量文件。
+
+* 8/16 ~ 8/17: FNAfilter实现(8/16上午学习OTB中filter具体编写方法，8/16下午实现FNAFilter并通过编译; 8/17编写FNAfilter的Example并测试) 
+    延期(8/16 ~ 8/22)：FNAFilter实现延期，主要是应为对OTB中已有的类库不熟悉，不知道那些方法可以直接使用，那些没有提供
+    8/22: 获取相邻对象共享边界的长度函数GetSharedBorderLength()实现
+            已参考MergeLabelObjectFunctor类实现了该方法。而且了解到  1)在OTB中LabelObject形状属性是由X轴方向线段的集合组成的，此平行线段包含起始位置和线的长度;  2)在合并两个对象的时候，几何形状的合并其实就是对象所包含线段集合中线段的依次合并;  3) 其合并过程很巧妙的用了一些STL库中的函数. 首先对要合并的两个对象所含线段集合按照从上到下、从左到右的顺序排列(用了STL的stable_sort函数)，在对排序后的两个对象的线段集合合并(用了STL的merge函数)，最后在迭代循环依次合并重合的线段
+    8/22 pm: 构件FNAFilte处理管道，并用Example测试算法并修改
+    8/23 am: 需要修改的内容:  1) 输出背景值设置;   2) 将输入信息拷贝到输出;  3) 波段信息获取修改;  4) 改为多线程实现;  5)添加处理进度信息;  6) 添加内部信息调试打印函数
+</code></pre>
+<h3>待参透的内容</h3>
+<ol>
+<li>OTB中InPlace到底是什么意思？及如何使用？</li>
+<li>OTB中管道upstream和downstream实现的再了解，主要涉及到ProcessObject和DataObject两个基类之间的协作</li>
+<li>OTB中如何实现流处理和多线程的，主要参考文档及ImageSouce基类的实现</li>
+<li>OTB中如何添加测试和应用程序</li>
+</ol>]]></content:encoded>
+    </item>
+  </channel>
+</rss>

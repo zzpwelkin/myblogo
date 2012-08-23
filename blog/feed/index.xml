@@ -7,19 +7,72 @@
      xmlns:wfw="http://wellformedweb.org/CommentAPI/"
      >
   <channel>
-    <title>Your Blog's Name</title>
-    <link>http://zzpwelkin.github.com/blog</link>
-    <description>Your Blog's short description</description>
-    <pubDate>Mon, 02 Apr 2012 03:01:48 GMT</pubDate>
+    <title>zzpwelkin</title>
+    <link>http://localhost:8080/blog</link>
+    <description>Working in headwind</description>
+    <pubDate>Thu, 23 Aug 2012 13:48:59 GMT</pubDate>
     <generator>Blogofile</generator>
     <sy:updatePeriod>hourly</sy:updatePeriod>
     <sy:updateFrequency>1</sy:updateFrequency>
     <item>
+      <title>影像镶嵌自动化实现白皮书</title>
+      <link>http://localhost:8080/myglogo/blog/2012/08/23/影像镶嵌自动化实现白皮书</link>
+      <pubDate>Thu, 23 Aug 2012 21:48:59 CST</pubDate>
+      <category><![CDATA[影像镶嵌]]></category>
+      <guid isPermaLink="true">http://localhost:8080/myglogo/blog/2012/08/23/影像镶嵌自动化实现白皮书</guid>
+      <description>影像镶嵌自动化实现白皮书</description>
+      <content:encoded><![CDATA[<h3>影像镶嵌的主要难点</h3>
+<ol>
+<li>影像之间空间几何信息差异问题，使得镶嵌后的影像上拼接处地物有不重合现象；</li>
+<li>影像之间亮度和色度差异问题</li>
+<li>单幅影像内亮度和色</li>
+</ol>
+<h3>实现步骤</h3>
+<ol>
+<li>
+<p>投影影像到同一坐标系下和并重采样影像为同一分辨率，对每一幅影像进行匀光匀色操作(如果需要，非必须的)；</p>
+</li>
+<li>
+<p>计算影像重叠信息并生成重叠信息表和重叠影像重叠区域裁减后的影像；</p>
+</li>
+<li>
+<blockquote>
+<p>S(a). 几何差异处理：用MS等方法，处理裁减后的重叠影像对并生成对象层( <em>@a</em> )<br />
+</p>
+<blockquote>
+<p>A(a) 拼接线生成：产生一条穿过对象个数最少的拼接线。此拼接线由穿过所有连续对象的中心线连接而成( <em>@b</em> )<br />
+   A(b) 几何纠正：依据对象的周长、面积及主方向匹配重叠对象层上的对象，在对象上选取明显角点作为匹配的同名点，
+        由匹配的同名点和精度较高的参考影像生成其他影像几何纠正参数表( <em>@c</em> )<br />
+S(b). 辐射差异处理：根据匀光匀色算法( <em>@d</em> )，统计重叠影像辐射差异纠正模型并产生辐射纠正参数表</p>
+</blockquote>
+</blockquote>
+</li>
+<li>
+<p>依据上面生成的模型分别对影像进行纠正并生成修正后的影像；</p>
+</li>
+<li>
+<p>拼接修正后的影像</p>
+</li>
+</ol>
+<h3>具体实现方法</h3>
+<p>@a. 可以用较成熟的Mean-shift 或 mumford-shah方法产生对象层<br />
+@b. 待详细研究<br />
+@c. 几何纠正用一般的多项式拟合工具即可<br />
+@d. 目前已有的镶嵌软件都有匀光匀色功能，但我使用的几个软件感觉效果不太理想(也可能是自己参数每设置对吧)。最近使用了一个Montage软件，其对天文影像辐射纠正效&gt;    果很好，不知道其辐射纠正原理是否适合遥感影像</p>
+<h3>其他内容参考</h3>
+<ol>
+<li>Mean-Shift算法</li>
+<li>Mumford-Shah算法</li>
+<li>Montage软件</li>
+<li>hugin软件</li>
+</ol>]]></content:encoded>
+    </item>
+    <item>
       <title>网络GIS服务构建计划书</title>
-      <link>http://zzpwelkin.github.com/myblogo/blog/2012/04/02/网络gis服务构建计划书</link>
-      <pubDate>Mon, 02 Apr 2012 11:01:48 CST</pubDate>
+      <link>http://localhost:8080/myglogo/blog/2012/08/23/网络gis服务构建计划书</link>
+      <pubDate>Thu, 23 Aug 2012 21:48:59 CST</pubDate>
       <category><![CDATA[WPS网络服务]]></category>
-      <guid isPermaLink="true">http://zzpwelkin.github.com/myblogo/blog/2012/04/02/网络gis服务构建计划书</guid>
+      <guid isPermaLink="true">http://localhost:8080/myglogo/blog/2012/08/23/网络gis服务构建计划书</guid>
       <description>网络GIS服务构建计划书</description>
       <content:encoded><![CDATA[<h3>每天工作时间安排</h3>
 <ul>
@@ -106,97 +159,47 @@
 <h4>第六阶段：扩大规模并前进...</h4>]]></content:encoded>
     </item>
     <item>
-      <title>Post 5</title>
-      <link>http://zzpwelkin.github.com/myblogo/blog/2010/08/29/post-5</link>
-      <pubDate>Sun, 29 Aug 2010 15:23:00 CST</pubDate>
-      <category><![CDATA[General Stuff]]></category>
-      <guid isPermaLink="true">http://zzpwelkin.github.com/myblogo/blog/2010/08/29/post-5</guid>
-      <description>Post 5</description>
-      <content:encoded><![CDATA[<p>This is post #5</p>]]></content:encoded>
-    </item>
-    <item>
-      <title>Post 7</title>
-      <link>http://zzpwelkin.github.com/myblogo/blog/2009/08/29/post-7</link>
-      <pubDate>Sat, 29 Aug 2009 15:25:00 CST</pubDate>
-      <category><![CDATA[General Stuff]]></category>
-      <guid isPermaLink="true">http://zzpwelkin.github.com/myblogo/blog/2009/08/29/post-7</guid>
-      <description>Post 7</description>
-      <content:encoded><![CDATA[<p>This is post #7</p>]]></content:encoded>
-    </item>
-    <item>
-      <title>Post 6</title>
-      <link>http://zzpwelkin.github.com/myblogo/blog/2009/08/29/post-6</link>
-      <pubDate>Sat, 29 Aug 2009 15:24:00 CST</pubDate>
-      <category><![CDATA[General Stuff]]></category>
-      <guid isPermaLink="true">http://zzpwelkin.github.com/myblogo/blog/2009/08/29/post-6</guid>
-      <description>Post 6</description>
-      <content:encoded><![CDATA[<p>This is post #6</p>]]></content:encoded>
-    </item>
-    <item>
-      <title>Post 4</title>
-      <link>http://zzpwelkin.github.com/myblogo/blog/2009/08/29/post-4</link>
-      <pubDate>Sat, 29 Aug 2009 15:22:00 CST</pubDate>
-      <category><![CDATA[General Stuff]]></category>
-      <guid isPermaLink="true">http://zzpwelkin.github.com/myblogo/blog/2009/08/29/post-4</guid>
-      <description>Post 4</description>
-      <content:encoded><![CDATA[<p>This is post #4</p>]]></content:encoded>
-    </item>
-    <item>
-      <title>Post 3 - Unicode Test - How about some 日本語テスト</title>
-      <link>http://zzpwelkin.github.com/myblogo/blog/2009/08/22/post-3---unicode-test---how-about-some-日本語テスト</link>
-      <pubDate>Sat, 22 Aug 2009 15:22:00 CST</pubDate>
-      <category><![CDATA[Unicode]]></category>
-      <guid isPermaLink="true">http://zzpwelkin.github.com/myblogo/blog/2009/08/22/post-3---unicode-test---how-about-some-日本語テスト</guid>
-      <description>Post 3 - Unicode Test - How about some 日本語テスト</description>
-      <content:encoded><![CDATA[<p>Anglo-Saxon Rune Poem:</p>
-<p>ᚠᛇᚻ᛫ᛒᛦᚦ᛫ᚠᚱᚩᚠᚢᚱ᛫ᚠᛁᚱᚪ᛫ᚷᛖᚻᚹᛦᛚᚳᚢᛗ
-ᛋᚳᛖᚪᛚ᛫ᚦᛖᚪᚻ᛫ᛗᚪᚾᚾᚪ᛫ᚷᛖᚻᚹᛦᛚᚳ᛫ᛗᛁᚳᛚᚢᚾ᛫ᚻᛦᛏ᛫ᛞᚫᛚᚪᚾ
-ᚷᛁᚠ᛫ᚻᛖ᛫ᚹᛁᛚᛖ᛫ᚠᚩᚱ᛫ᛞᚱᛁᚻᛏᚾᛖ᛫ᛞᚩᛗᛖᛋ᛫ᚻᛚᛇᛏᚪᚾ᛬</p>
-<p>Tamil poetry:</p>
-<p>யாமறிந்த மொழிகளிலே தமிழ்மொழி போல் இனிதாவது எங்கும் காணோம்,
-பாமரராய் விலங்குகளாய், உலகனைத்தும் இகழ்ச்சிசொலப் பான்மை கெட்டு,
-நாமமது தமிழரெனக் கொண்டு இங்கு வாழ்ந்திடுதல் நன்றோ? சொல்லீர்!
-தேமதுரத் தமிழோசை உலகமெலாம் பரவும்வகை செய்தல் வேண்டும்.</p>
-<p>I can eat glass:
-私はガラスを食べられます。それは私を傷つけません。
-Կրնամ ապակի ուտել և ինծի անհանգիստ չըներ։
-I kå Glas frässa, ond des macht mr nix!
-᚛᚛ᚉᚑᚅᚔᚉᚉᚔᚋ ᚔᚈᚔ ᚍᚂᚐᚅᚑ ᚅᚔᚋᚌᚓᚅᚐ᚜
-אני יכול לאכול זכוכית וזה לא מזיק לי
-काचं शक्नोम्यत्तुम् । नोपहिनस्ति माम् ॥ </p>]]></content:encoded>
-    </item>
-    <item>
-      <title>Post 2</title>
-      <link>http://zzpwelkin.github.com/myblogo/blog/2009/07/24/post-2</link>
-      <pubDate>Fri, 24 Jul 2009 16:20:00 CST</pubDate>
-      <category><![CDATA[Category 2]]></category>
-      <category><![CDATA[Category 1]]></category>
-      <guid isPermaLink="true">http://zzpwelkin.github.com/myblogo/blog/2009/07/24/post-2</guid>
-      <description>Post 2</description>
-      <content:encoded><![CDATA[<p>This is post #2</p>]]></content:encoded>
-    </item>
-    <item>
-      <title>Post 1</title>
-      <link>http://zzpwelkin.github.com/myblogo/blog/2009/07/23/post-1</link>
-      <pubDate>Thu, 23 Jul 2009 15:22:00 CST</pubDate>
-      <category><![CDATA[Category 1]]></category>
-      <guid isPermaLink="true">http://zzpwelkin.github.com/myblogo/blog/2009/07/23/post-1</guid>
-      <description>Post 1</description>
-      <content:encoded><![CDATA[<p>This is post #1</p>]]></content:encoded>
-    </item>
-    <item>
-      <title>Syntax highlight test</title>
-      <link>http://zzpwelkin.github.com/myblogo/blog/2007/08/29/syntax-highlight-test</link>
-      <pubDate>Wed, 29 Aug 2007 15:25:00 CST</pubDate>
-      <category><![CDATA[General Stuff]]></category>
-      <guid isPermaLink="true">http://zzpwelkin.github.com/myblogo/blog/2007/08/29/syntax-highlight-test</guid>
-      <description>Syntax highlight test</description>
-      <content:encoded><![CDATA[<p>This post contains some highlighted python code:</p>
-<div class="pygments_murphy"><pre><span class="kn">import</span> <span class="nn">this</span>
+      <title>区域增长分隔</title>
+      <link>http://localhost:8080/myglogo/blog/2012/08/23/区域增长分隔</link>
+      <pubDate>Thu, 23 Aug 2012 21:48:59 CST</pubDate>
+      <category><![CDATA[面向对象信息提取]]></category>
+      <guid isPermaLink="true">http://localhost:8080/myglogo/blog/2012/08/23/区域增长分隔</guid>
+      <description>区域增长分隔</description>
+      <content:encoded><![CDATA[<h3>分割概述</h3>
+<p>面向对象中的分隔分为以pixels或cells(如规则2D和3D的格网)和以对象为单位的分类</p>
+<p>*1. 以pixels或cells为单位的分类
+    * 输入: a. 规则格网数据(如影像、DEM数据等)
+          b. 对象或处理范围约束文件(如线或面要素矢量文件)</p>
+<pre><code>* 输出: 分类后的面要素矢量文件。空间属性:每个对象的空间范围；非空间属性：每个对象的ID号，色度相关的值(如均值、方差、最大值、最小值、紧致度等),几何形状相关值(如面积、周长、长宽比等)，继承属性(如所属的上层对象，包含的下层对象.是否需要？从集合信息中可以计算得到)
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;main&quot;</span><span class="p">:</span>
-    <span class="k">print</span> <span class="s">&quot;Hello, World!&quot;</span>
-</pre></div>]]></content:encoded>
+* 实现算法：Meanshift(OTB和grass均已实现)、Mumford-S(grass的Addons中已实现)、区域增长算法
+</code></pre>
+<p>*2. 以对象为单位的分类
+      * 输入: 1 步得到的结果(LabelMap对象或Vector对象)、原始影像</p>
+<pre><code>  * 输出: 同1 (LabelImage对象或Vector对象)
+
+  * 实现算法：区域增长算法(FNA分形网络演变分隔算法)
+</code></pre>
+<h3>实现计划：</h3>
+<pre><code>在OTB的OBIA模块上添加分隔算法
+* 8/13～8/15： 查看OBIA模块已经实现了那些东西及定义分割类接口;
+    OBIA模块应用了ITK的Label对象框架(OTB都有那些框架?)。
+    上面两种分割方法的概要数据流为: 1) Grids数据-----&gt;矢量文件; 2) 矢量文件------&gt;矢量文件。
+
+* 8/16 ~ 8/17: FNAfilter实现(8/16上午学习OTB中filter具体编写方法，8/16下午实现FNAFilter并通过编译; 8/17编写FNAfilter的Example并测试) 
+    延期(8/16 ~ 8/22)：FNAFilter实现延期，主要是应为对OTB中已有的类库不熟悉，不知道那些方法可以直接使用，那些没有提供
+    8/22: 获取相邻对象共享边界的长度函数GetSharedBorderLength()实现
+            已参考MergeLabelObjectFunctor类实现了该方法。而且了解到  1)在OTB中LabelObject形状属性是由X轴方向线段的集合组成的，此平行线段包含起始位置和线的长度;  2)在合并两个对象的时候，几何形状的合并其实就是对象所包含线段集合中线段的依次合并;  3) 其合并过程很巧妙的用了一些STL库中的函数. 首先对要合并的两个对象所含线段集合按照从上到下、从左到右的顺序排列(用了STL的stable_sort函数)，在对排序后的两个对象的线段集合合并(用了STL的merge函数)，最后在迭代循环依次合并重合的线段
+    8/22 pm: 构件FNAFilte处理管道，并用Example测试算法并修改
+    8/23 am: 需要修改的内容:  1) 输出背景值设置;   2) 将输入信息拷贝到输出;  3) 波段信息获取修改;  4) 改为多线程实现;  5)添加处理进度信息;  6) 添加内部信息调试打印函数
+</code></pre>
+<h3>待参透的内容</h3>
+<ol>
+<li>OTB中InPlace到底是什么意思？及如何使用？</li>
+<li>OTB中管道upstream和downstream实现的再了解，主要涉及到ProcessObject和DataObject两个基类之间的协作</li>
+<li>OTB中如何实现流处理和多线程的，主要参考文档及ImageSouce基类的实现</li>
+<li>OTB中如何添加测试和应用程序</li>
+</ol>]]></content:encoded>
     </item>
   </channel>
 </rss>
