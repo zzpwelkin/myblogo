@@ -1,55 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed
+  xmlns="http://www.w3.org/2005/Atom"
+  xmlns:thr="http://purl.org/syndication/thread/1.0"
+  xml:lang="en"
+   >
+  <title type="text">zzpwelkin</title>
+  <subtitle type="text">Working in headwind</subtitle>
 
+  <updated>2012-08-23T13:48:59Z</updated>
+  <generator uri="http://blogofile.com/">Blogofile</generator>
 
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    
-  <title>zzpwelkin</title>
-<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="/myglogo/blog/feed" />
-<link rel="alternate" type="application/atom+xml" title="Atom 1.0"
-href="/myglogo/blog/feed/atom" />
-<link rel='stylesheet' href='/css/pygments_murphy.css' type='text/css' />
-
-
-    <link rel='stylesheet' href='http://localhost:8080/myglogo/css/base.css' type='text/css' />
-  </head>
-  <body>
-    <div class="header" id="content">
-      
-  <h1 backage>zzpwelkin</h1>
-<p>记录并分享生活中的点滴.</p>
-<hr/>
-
-
-      <div id="main_block">
-	<!-- 分类列表 -->
-	<div class="categorysidebar" id="category">
-	  <ul>
-
-		  <li><a href="/myglogo/blog/category/wps网络服务">WPS网络服务 (1)</a><li>	
-		  <li><a href="/myglogo/blog/category/影像镶嵌">影像镶嵌 (1)</a><li>	
-		  <li><a href="/myglogo/blog/category/面向对象信息提取">面向对象信息提取 (1)</a><li>	
-	  </ul>
-	</div>
-	
-	<!-- 内容体 -->
-        <div class="post" id="post_block">
-          
-
-<div class="blog_post">
-  <a name="网络gis服务构建计划书"></a>
-  <h2 class="blog_post_title"><a href="/myglogo/blog/2012/08/21/网络gis服务构建计划书" rel="bookmark" title="Permanent Link to 网络GIS服务构建计划书">网络GIS服务构建计划书</a></h2>
-  <small>August 21, 2012 at 11:38 PM | categories: 
-
-<a href='/myglogo/blog/category/wps网络服务'>WPS网络服务</a>
- | <a href="http://localhost:8080/myglogo/blog/2012/08/21/网络gis服务构建计划书#disqus_thread">View Comments</a>
-</small><p/>
-  <div class="post_prose">
-    
-  <h3>每天工作时间安排</h3>
+  <link rel="alternate" type="text/html" href="http://localhost:8080/blog" />
+  <id>http://localhost:8080/blog/feed/atom/</id>
+  <link rel="self" type="application/atom+xml" href="http://localhost:8080/blog/feed/atom/" />
+  <entry>
+    <author>
+      <name></name>
+      <uri>http://localhost:8080/blog</uri>
+    </author>
+    <title type="html"><![CDATA[网络GIS服务构建计划书]]></title>
+    <link rel="alternate" type="text/html" href="http://localhost:8080/myglogo/blog/2012/08/23/网络gis服务构建计划书" />
+    <id>http://localhost:8080/myglogo/blog/2012/08/23/网络gis服务构建计划书</id>
+    <updated>2012-08-23T21:48:59Z</updated>
+    <published>2012-08-23T21:48:59Z</published>
+    <category scheme="http://localhost:8080/blog" term="WPS网络服务" />
+    <summary type="html"><![CDATA[网络GIS服务构建计划书]]></summary>
+    <content type="html" xml:base="http://localhost:8080/myglogo/blog/2012/08/23/网络gis服务构建计划书"><![CDATA[<h3>每天工作时间安排</h3>
 <ul>
 <li>早：9:00 ~ 12:00</li>
 <li>下：休息</li>
@@ -131,54 +107,6 @@ href="/myglogo/blog/feed/atom" />
 <li>富客户端访问wps服务实现</li>
 <li>(长期计划) 在服务端增加新的处理功能，如面向对象信息提取，影像镶嵌、空三等具有研究意义的功能集</li>
 </ul>
-<h4>第六阶段：扩大规模并前进...</h4>
-
-  </div>
-</div>
-
-
-
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-  var disqus_url = "http://localhost:8080/myglogo/blog/2012/08/21/网络gis服务构建计划书";
-</script>
-<script type="text/javascript" src="http://disqus.com/forums/your_disqus_name/embed.js"></script>
-<noscript><a href="http://your_disqus_name.disqus.com/?url=ref">View the discussion thread.</a></noscript><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-
-        </div><!-- End Prose Block -->
-      </div><!-- End Main Block -->
-      <div class="footer" id="footer">
-        
-  <hr/>
-  <p id="credits">
-Powered by <a href="http://www.blogofile.com">Blogofile</a>.<br/>
-<br/>
-RSS feeds for <a href="/myglogo/blog/feed">Entries</a>
- and <a
-href="http://your_disqus_name.disqus.com/latest.rss">Comments</a>.
-<br>
-</p>
-<script type="text/javascript">
-//<![CDATA[
-(function() {
-		var links = document.getElementsByTagName('a');
-		var query = '?';
-		for(var i = 0; i < links.length; i++) {
-			if(links[i].href.indexOf('#disqus_thread') >= 0) {
-				query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
-			}
-		}
-		document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/your_disqus_name/get_num_replies.js' + query + '"></' + 'script>');
-	})();
-//]]>
-</script>
-
-
-      </div> <!-- End Footer -->
-    </div> <!-- End Content -->
-  </body>
-</html>
-
-
-
-
+<h4>第六阶段：扩大规模并前进...</h4>]]></content>
+  </entry>
+</feed>
