@@ -1,0 +1,38 @@
+−
+<plugins:plugin xsi:schemaLocation="http://taverna.sf.net/2008/xml/plugins     http://taverna.sourceforge.net/2008/xml/plugins/plugins-2008-10-16.xsd">
+    <provider>welkin</provider>
+    <identifier>org.ogc.wps</identifier>
+    <version>0.0.1</version>
+    <name>WPS service Plugin</name>
+    <description>
+        accessing wps service 
+    </description>
+    <enabled>true</enabled>
+    <repositories>
+        <!-- myGrid repositories and mirrors  -->
+        <repository>http://www.mygrid.org.uk/maven/repository/</repository>
+        <repository>http://bioinf.ncl.ac.uk/mirror/maven/repository/</repository>
+        <repository>http://mirror.omii.ac.uk/maven/repository/</repository>
+        <repository>
+            http://www.mygrid.org.uk/maven/snapshot-repository/
+        </repository>
+        <!--  Mirror of official maven repository -->
+        <repository>http://www.mygrid.org.uk/maven/repo1/</repository>
+        <repository>http://ibiblio.lsu.edu/main/pub/packages/maven2/</repository>
+        <repository>http://www.eviware.com/repository/maven2/</repository>
+        <!-- 52North repository -->
+        <repository>http://52north.org/maven/repo/releases/</repository>
+        <!-- welkin repository -->
+        <repository>http://zzpwelkin.github.com/myblogo/maven/repository</repository>
+
+    </repositories>
+    <profile>
+        <artifact groupId="ogc" artifactId="wps-activity" version="0.0.1"/>
+        <artifact groupId="ogc" artifactId="wps-activity-ui" version="0.0.1"/>
+    </profile>
+    <compatibility>
+        <application>
+            <version>2.3.0</version>
+        </application>
+    </compatibility>
+</plugins:plugin>
